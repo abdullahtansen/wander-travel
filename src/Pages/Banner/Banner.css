@@ -1,0 +1,21 @@
+.banner {
+  background-image: url("https://i.ibb.co/MCw9Khy/travel-photography.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: cover;
+}
+.banner-section {
+  margin-bottom: 10px;
+  padding-top: 100px;
+  color: tomato;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px teal;
+}
+.banner-section p {
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 2px 2px teal;
+  color: rgb(0, 0, 0);
+}

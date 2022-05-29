@@ -1,0 +1,25 @@
+/* .places-top {
+  margin-top: 20px;
+}
+.places-top h2 {
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.places-top p {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+} */
+/* .patientservices {
+  margin-right: 70px;
+  margin-left: 80px;
+  padding-bottom: 30px;
+} */
+.see-more {
+  margin-top: 20px;
+}
+.places {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+}

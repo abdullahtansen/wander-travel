@@ -1,0 +1,72 @@
+.full-section {
+  background-color: #fcf4e0;
+  padding-bottom: 30px;
+}
+.full-form {
+  background-color: white;
+  box-shadow: 4px 2px 13px 0px lightblue;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+.logged-in {
+  background-color: white;
+
+  margin-top: 10px;
+}
+.login-form {
+  margin-left: 25%;
+  margin-top: 10%;
+  width: 100%;
+}
+.Email {
+  width: 70%;
+}
+.Password {
+  width: 70%;
+}
+.any-account {
+  margin-left: 160px;
+  margin-top: 15px;
+}
+.after {
+  width: 150px;
+  margin-left: 130px;
+  padding-bottom: 2px;
+}
+
+.other__methods {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+
+.other__methods::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 40%;
+  left: 0;
+  top: 50%;
+  background-color: lightgrey;
+}
+
+.other__methods::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 40%;
+  right: 0;
+  top: 50%;
+  background-color: lightgrey;
+}
+
+.login-btn {
+  margin-left: 100px;
+}
+.google-btn {
+  margin-left: 10px;
+}
+.git-btn {
+  margin-left: 10px;
+}
