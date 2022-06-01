@@ -1,0 +1,28 @@
+.manage-places {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+}
+.card-body {
+  box-shadow: 0px 0px 10px 0px;
+  width: 350px;
+  border-radius: 20px;
+  padding: 0px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.image {
+  width: 100%;
+  padding: 0px;
+  height: 200px;
+  border-radius: 10px;
+}
+.name {
+  font-size: 28px;
+  font-weight: 700;
+}

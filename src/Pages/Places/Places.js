@@ -8,7 +8,7 @@ import "./Places.css";
 const Places = () => {
   const [tour, setTour] = useState([]);
   useEffect(() => {
-    fetch("./tour.json")
+    fetch("http://localhost:5000/places")
       .then((res) => res.json())
       .then((data) => setTour(data));
   }, []);
@@ -20,7 +20,7 @@ const Places = () => {
       </p>
       <div className="col-12 col-lg-4 col-md-4 places">
         {tour.map((place) => (
-          <Place key={place.id} place={place}></Place>
+          <Place key={place._id} place={place}></Place>
         ))}
       </div>
     </Container>

@@ -5,7 +5,7 @@ import "./Login.css";
 import { useState } from "react";
 import useAuth from "../../hooks/UseAuth";
 import { useRef } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -36,17 +36,22 @@ const Login = () => {
   };
   //   private route setup
   const location = useLocation();
-  const history = useHistory();
-  const redirect_URI = location.state?.from || "/";
+  let navigate = useNavigate();
+
+  let from = location.state?.from?.pathname || "/";
   const handleGoogle = () => {
     signInUsingGoogle().then(() => {
-      history.push(redirect_URI);
+      if (user) {
+        navigate(from, { replace: true });
+      }
     });
   };
 
   const handleGithub = () => {
     signInUsingGithub().then(() => {
-      history.push(redirect_URI);
+      if (user) {
+        navigate(from, { replace: true });
+      }
     });
   };
 
