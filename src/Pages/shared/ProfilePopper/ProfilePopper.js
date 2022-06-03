@@ -1,17 +1,16 @@
-// import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState } from "react";
 import { Button, Overlay, Popover } from "react-bootstrap";
-// import useAuth from "../../../hooks/useAuth";
-import useFirebase from "../../../hooks/useFirebase";
+import useAuth from "../../../hooks/UseAuth";
 import "./ProfilePopper.css";
 
 const ProfilePopper = () => {
   const [show, setShow] = useState(false);
   const [target, setTarget] = useState(null);
   const ref = useRef(null);
-  const { user, logOut } = useFirebase();
-  console.log(user);
+  const { user, logOut } = useAuth();
+  // console.log(user);
 
   const handleClick = (event) => {
     setShow(!show);
@@ -34,7 +33,8 @@ const ProfilePopper = () => {
             <h6>{user.displayName}</h6>
             <p>{user.email}</p>
             <Button onClick={logOut} className="main__button">
-              {/* <FontAwesomeIcon icon={faSignOutAlt} /> */}Log Out
+              <FontAwesomeIcon icon={faSignOutAlt} />
+              Log Out
             </Button>
           </Popover.Body>
         </Popover>

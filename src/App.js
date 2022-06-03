@@ -9,6 +9,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import AddPlaces from "./Pages/AddPlaces/AddPlaces";
 import ManagePlaces from "./ManagePlaces/ManagePlaces";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
+import Footer from "./Pages/shared/Footer/Footer";
 
 function App() {
   return (
@@ -26,18 +27,11 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
-          {/* <Route
-            path="/managePlaces"
-            element={
-              <RequireAuth>
-                <ManagePlaces />
-              </RequireAuth>
-            }
-          /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/managePlaces/:serviceId" element={<ManagePlaces />} />
           <Route path="/addPlaces" element={<AddPlaces />} />
         </Routes>
+        <Footer />
       </AuthProvider>
     </div>
   );

@@ -18,7 +18,7 @@ const Places = () => {
       <p>
         We are offering low cost tour tickets. Because of you enjoy the tour
       </p>
-      <div className="col-12 col-lg-4 col-md-4 places">
+      <div md={4} lg={4} sm={12} className="places">
         {tour.map((place) => (
           <Place key={place._id} place={place}></Place>
         ))}

@@ -1,0 +1,22 @@
+.offer {
+  background-image: url("https://i.ibb.co/StWhKTf/hollyDay.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+.offer-section {
+  margin-bottom: 50px;
+  padding-top: 120px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px rgb(20, 65, 65);
+}
+span {
+  color: red;
+}
+.form_design {
+  width: 400px;
+  margin-left: 440px;
+}
