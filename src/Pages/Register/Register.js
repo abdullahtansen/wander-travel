@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import login from "../../img/login.38acde2b.png";
-// import { FaGoogle, FaGithubSquare } from "react-icons/fa";
+import { FaGoogle, FaGithubSquare } from "react-icons/fa";
 import "./Register.css";
 import useAuth from "./../../hooks/UseAuth";
 
@@ -41,7 +41,7 @@ const Register = () => {
           <Col md={6} sm={12} className="logged-in">
             <Form className="login-form" onSubmit={handelSubmit}>
               <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label>Your Email</Form.Label>
+                <Form.Label className="email">Your Email</Form.Label>
                 <Form.Control
                   ref={emailRef}
                   type="email"
@@ -50,7 +50,7 @@ const Register = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
-                <Form.Label>Your Password</Form.Label>
+                <Form.Label className="email">Your Password</Form.Label>
                 <Form.Control
                   ref={passwordRef}
                   type="password"
@@ -59,7 +59,7 @@ const Register = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
-                <Form.Label>Confirm Password</Form.Label>
+                <Form.Label className="email">Confirm Password</Form.Label>
                 <Form.Control
                   ref={confirmPasswordRef}
                   type="password"
@@ -67,7 +67,11 @@ const Register = () => {
                   className="Password"
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button
+                style={{ marginRight: "120px" }}
+                variant="primary"
+                type="submit"
+              >
                 Register
               </Button>
             </Form>
@@ -81,25 +85,25 @@ const Register = () => {
             <div className="login-btn">
               <div>
                 <Button className="google-btn" onClick={handleGoogle}>
-                  {/* <FaGoogle
+                  <FaGoogle
                     style={{
                       marginRight: "10px",
                       marginBottom: "3px",
                       color: "black",
                       fontSize: "25px",
                     }}
-                  ></FaGoogle> */}
+                  ></FaGoogle>
                   Google Sign In
                 </Button>
                 <Button onClick={handleGithub} className="git-btn">
-                  {/* <FaGithubSquare
+                  <FaGithubSquare
                     style={{
                       marginRight: "10px",
                       marginBottom: "3px",
                       color: "black",
                       fontSize: "25px",
                     }}
-                  ></FaGithubSquare> */}
+                  ></FaGithubSquare>
                   Github Sign In
                 </Button>
               </div>

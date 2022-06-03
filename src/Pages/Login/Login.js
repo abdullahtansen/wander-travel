@@ -1,6 +1,6 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
 import login from "../../img/login.38acde2b.png";
-// import { FaGoogle, FaGithubSquare } from "react-icons/fa";
+import { FaGoogle, FaGithubSquare } from "react-icons/fa";
 import "./Login.css";
 import { useState } from "react";
 import useAuth from "../../hooks/UseAuth";
@@ -65,7 +65,7 @@ const Login = () => {
           <Col md={6} sm={12} className="logged-in">
             <Form className="login-form" onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label className="email">Email address</Form.Label>
                 <Form.Control
                   ref={emailRef}
                   type="email"
@@ -74,7 +74,7 @@ const Login = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label className="email">Password</Form.Label>
                 <Form.Control
                   ref={passwordRef}
                   type="password"
@@ -82,7 +82,11 @@ const Login = () => {
                   className="Password"
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button
+                style={{ marginRight: "120px" }}
+                variant="primary"
+                type="submit"
+              >
                 Login
               </Button>
             </Form>
@@ -96,25 +100,25 @@ const Login = () => {
               <div className="row mb-3 text-danger">{error}</div>
               <div>
                 <Button onClick={handleGoogle} className="google-btn">
-                  {/* <FaGoogle
+                  <FaGoogle
                     style={{
                       marginRight: "10px",
                       marginBottom: "3px",
                       color: "black",
                       fontSize: "25px",
                     }}
-                  ></FaGoogle> */}
+                  ></FaGoogle>
                   Google Sign In
                 </Button>
                 <Button onClick={handleGithub} className="git-btn">
-                  {/* <FaGithubSquare
+                  <FaGithubSquare
                     style={{
                       marginRight: "10px",
                       marginBottom: "3px",
                       color: "black",
                       fontSize: "25px",
                     }}
-                  ></FaGithubSquare> */}
+                  ></FaGithubSquare>
                   Github Sign In
                 </Button>
               </div>
