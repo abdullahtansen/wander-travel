@@ -6,7 +6,7 @@ import "./Gallerys.css";
 const Gallerys = () => {
   const [gallerys, setGallery] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/gallery")
+    fetch("https://wander-travel-server.herokuapp.com/gallery")
       .then((res) => res.json())
       .then((data) => setGallery(data));
   }, []);

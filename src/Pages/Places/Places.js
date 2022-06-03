@@ -8,7 +8,7 @@ import "./Places.css";
 const Places = () => {
   const [tour, setTour] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/places")
+    fetch("https://wander-travel-server.herokuapp.com/places")
       .then((res) => res.json())
       .then((data) => setTour(data));
   }, []);

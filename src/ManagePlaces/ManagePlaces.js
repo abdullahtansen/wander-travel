@@ -12,7 +12,7 @@ const ManagePlaces = () => {
   const { register, handleSubmit, reset } = useForm();
   const [tours, setTours] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/places/${serviceId}`)
+    fetch(`https://wander-travel-server.herokuapp.com/places/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setTours(data));
   }, [serviceId]);
@@ -25,12 +25,14 @@ const ManagePlaces = () => {
       number: data.number,
       address: data.address,
     };
-    axios.post("http://localhost:5000/booking", product).then((res) => {
-      if (res.product.insertedId) {
-        alert("added successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://wander-travel-server.herokuapp.com/booking", product)
+      .then((res) => {
+        if (res.product.insertedId) {
+          alert("added successfully");
+          reset();
+        }
+      });
     navigate("/myOrders");
   };
 

@@ -7,13 +7,15 @@ const MyOrders = () => {
   const { user } = useAuth();
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/booking?email=${user.email}`)
+      fetch(
+        `https://wander-travel-server.herokuapp.com/booking?email=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => setBooking(data));
     }
   }, [user]);
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/booking/${id}`;
+    const url = `https://wander-travel-server.herokuapp.com/booking/${id}`;
     console.log(url);
     fetch(url, {
       method: "DELETE",

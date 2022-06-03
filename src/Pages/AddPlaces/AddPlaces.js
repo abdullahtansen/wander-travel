@@ -10,13 +10,15 @@ const AddPlaces = () => {
     //   lname: data.lastName,
     //   age: data.age,
     // };
-    axios.post("http://localhost:5000/places", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("added successfully");
-        reset();
-      }
-    });
-    console.log(data);
+    axios
+      .post("https://wander-travel-server.herokuapp.com/places", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("added successfully");
+          reset();
+        }
+      });
+    // console.log(data);
   };
   return (
     <div>
